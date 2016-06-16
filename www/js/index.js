@@ -15,26 +15,8 @@ $(document).ready(function() {
 		"mask": "999.999.999-99",
 		placeholder: ""
 	});
+	
 });
-
-function login(){
-	console.log('teste');
-	cpf = $('#username').val();
-	senha = $('#password').val();
-	myApp.showPreloader('Carregando...')
-	console.log(cpf);
-	console.log(senha);
-	if(cpf=='012.616.350-27'&&senha=='1234'){
-		window.location="app.html"; 
-		
-	}else{
-		myApp.hidePreloader();
-		myApp.alert('senha inválida!','Atenção')
-	}
-	
-	
-}
-
 
 $('#entrar').on('click', function(){
 	myApp.showPreloader('Carregando...');
@@ -42,7 +24,7 @@ $('#entrar').on('click', function(){
 
          $.ajax({
             type: "POST",
-            url: "http://localhost/tab-bar/ajax/login.php", 
+            url: "http://191.33.228.212:3000/tab-bar/ajax/login.php", 
             data: formData,            
             async: false,
             dataType: "json", 
@@ -71,7 +53,7 @@ myApp.onPageInit('cadastro_usuario', function (page) {
 		"mask": "999.999.999-99",
 		placeholder: ""
 	});
-	
+
 	$(".fone_nro").inputmask("mask", {
 		mask: ["(99) 9999-9999", "(99) 99999-9999" ],
 		placeholder: ""
@@ -156,7 +138,7 @@ $('#btn_cadastro').on('click', function(){
 	
          $.ajax({
             type: "POST",
-            url: "http://localhost/tab-bar/ajax/cadastro.php", 
+            url: "http://191.33.228.212:3000/tab-bar/ajax/cadastro.php", 
             data: formData,            
             async: false,
             dataType: "json", 
