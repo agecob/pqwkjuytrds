@@ -6,7 +6,7 @@
         id        = "com.phonegap.helloworld"
         version   = "1.0.0">
 
-    <name>Hello World</name>
+    <name>AGECOB App</name>
 
     <description>
         App para indicar possíveis clientes VIVO|GVT
