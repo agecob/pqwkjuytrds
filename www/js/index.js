@@ -11,11 +11,19 @@
 
 $(document).ready(function() {
 	
-	$("#username").inputmask("mask", {
-		"mask": "999.999.999-99",
-		placeholder: ""
-	});
+	var storedData = myApp.formGetData('dados_usuario');
+	  if(storedData) {	
+	  
+		$("#username").inputmask("mask", {
+			"mask": "999.999.999-99",
+			placeholder: ""
+		});
 	
+	  }else{
+		  
+		  window.location="app.html"; 
+		  
+	  }
 });
 
 $('#entrar').on('click', function(){

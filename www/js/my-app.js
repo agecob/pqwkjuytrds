@@ -29,20 +29,7 @@ $('#enviar').on('click', function(){
 				alert(json.msg);
 				
 				$("#form_indicacao")[0].reset();
-				//alert(json.msg);
-				
-				/*
-                if(json.result == true){
-                   //redireciona o usuario para pagina
-                   $("#usuario_nome").html(json.dados.nome);
- 
-                   $.mobile.changePage("#index", {
-                        transition : "slidefade"
-                    });
- 
-                }else{
-                   alert(json.msg);
-                }*/
+
             },error: function(xhr,e,t){
                 console.log(xhr.responseText);                
             }
@@ -51,8 +38,6 @@ $('#enviar').on('click', function(){
 });
 
 $(document).ready(function() {
-	
-	
 	
 	var storedData = myApp.formGetData('dados_usuario');
 	  if(storedData) {
@@ -144,7 +129,12 @@ var autocompleteDropdownSimple = myApp.autocomplete({
     }
 });
 
-
+$('#btn_sair').on('click', function(){
+	myApp.confirm('Deseja Sair?','Atenção!', function () {
+		var storedData = myApp.formDeleteData('dados_usuario');
+		app.exitApp();
+    });
+});
 
 $('#btn_atualizar').on('click', function(){
 
