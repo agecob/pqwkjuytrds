@@ -21,7 +21,7 @@ $('#enviar').on('click', function(){
 	
          $.ajax({
             type: "POST",
-            url: "http://localhost/tab-bar/ajax/enviar_indicacao.php", 
+            url: "http://191.33.228.212:3000/tab-bar/ajax/enviar_indicacao.php", 
             data: formData,            
             async: false,
             dataType: "json", 
@@ -199,7 +199,7 @@ $('#btn_atualizar').on('click', function(){
 
          $.ajax({
             type: "POST",
-            url: "http://localhost/tab-bar/ajax/atualiza_cadastro.php", 
+            url: "http://191.33.228.212:3000/tab-bar/ajax/atualiza_cadastro.php", 
             data: formData,            
             async: false,
             dataType: "json", 
@@ -255,7 +255,7 @@ $('#btn_indicar').on('click', function(){
 
          $.ajax({
             type: "POST",
-            url: "http://localhost/tab-bar/ajax/enviar_indicacao.php", 
+            url: "http://191.33.228.212:3000/tab-bar/ajax/enviar_indicacao.php", 
             data: formData,            
             async: false,
             dataType: "json", 
@@ -286,7 +286,7 @@ function carrega_indicacoes(){
 	
 	       $.ajax({
             type: "POST",
-            url: "http://localhost/tab-bar/ajax/indicacoes.php", 
+            url: "http://191.33.228.212:3000/tab-bar/ajax/indicacoes.php", 
             data: {cli_id : cli_id},            
             async: false,
             dataType: "json", 
@@ -361,7 +361,7 @@ myApp.onPageInit('indicacao', function (page) {
 	var ind_id = page.query.ind_id;
 	  $.ajax({
             type: "POST",
-            url: "http://localhost/tab-bar/ajax/get_indicacao.php", 
+            url: "http://191.33.228.212:3000/tab-bar/ajax/get_indicacao.php", 
             data: {ind_id:ind_id},            
             async: false,
             dataType: "json", 
